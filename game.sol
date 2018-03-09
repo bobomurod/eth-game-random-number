@@ -22,9 +22,16 @@ contract game{
 
         uint randomnumber = uint(keccak256(block..blockhash(block.number), nonce)) % 100;
         nonce ++ ;
-        
+
 
         //gamer gets 0.02 back if numeber coorect
+        if(randomnumber%2 == 0){
+            msg.sender.transfer(msg.value * 2);
+        }
+        else {
+            // game over, gamer = looser 
+        }
+
     }
 
 
