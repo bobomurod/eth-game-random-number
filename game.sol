@@ -4,9 +4,9 @@ contract game{
 
     function() public payable{
 
-            
-
     }
+
+    function play()
 
 
 }
