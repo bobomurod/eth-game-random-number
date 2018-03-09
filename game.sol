@@ -30,9 +30,11 @@ contract game{
         //gamer gets 0.02 back if numeber coorect
         if(randomnumber%2 == 0){
             msg.sender.transfer(msg.value * 2);
+            UserWon(msg.sender, randomnumber);
         }
         else {
             // game over, gamer = looser 
+            UserLost(msg.sender, randomnumber);
         }
 
     }
