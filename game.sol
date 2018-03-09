@@ -23,7 +23,7 @@ contract game{
             throw;
         }
 
-        uint randomnumber = uint(keccak256(block..blockhash(block.number), nonce)) % 100;
+        uint randomnumber = uint(keccak256(block.blockhash(block.number), nonce)) % 100;
         nonce ++ ;
 
 
