@@ -6,7 +6,11 @@ contract game{
 
     }
 
-    function play()
+    function play() payable public {
+
+        //gameer will need to pay 0.01 ether 
+        //gamer gets 0.02 back if numeber coorect
+    }
 
 
 }
