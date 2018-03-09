@@ -1,3 +1,6 @@
+//eth random number finding game
+//ver 0.000000001 final
+
 pragma solidity ^0.4.18;
 
 contract game{
@@ -20,7 +23,7 @@ contract game{
 
         //gameer will need to pay 0.01 ether 
         if (msg.value != 0.01 ether){
-            throw;
+            throw; //use   assert()  for non-JS testnets
         }
 
         uint randomnumber = uint(keccak256(block.blockhash(block.number), nonce)) % 100;
