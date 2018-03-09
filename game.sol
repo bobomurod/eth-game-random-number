@@ -20,7 +20,7 @@ contract game{
             throw;
         }
 
-        uint randomnumber
+        uint randomnumber = uint(keccak256(block..blockhash(block.number), nonce)) % 100;
 
         //gamer gets 0.02 back if numeber coorect
     }
