@@ -4,6 +4,9 @@ contract game{
 
     uint nonce = 0;
 
+    event UserWon(address user, uint numberGenerated);
+    event UserLost(address user, uint numberGenerated);
+
     function() public payable{
 
     }
